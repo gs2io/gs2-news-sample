@@ -1,0 +1,22 @@
+{{ define "main" }}
+  {{ range .Site.RegularPages.ByWeight }}
+    <article class="container">
+      <div class="card">
+        <div class="card-body" onclick="location.href={{ .Permalink }}">
+          <h5 class="card-title">
+              {{ if eq .Section "news" }}<span class="badge badge-primary">{{ end }}
+              {{ if eq .Section "events" }}<span class="badge badge-success">{{ end }}
+              {{ if eq .Section "maintenance" }}<span class="badge badge-warning">{{ end }}
+              {{ .Section }}
+              </span>
+              {{ .Title }}
+          </h5>
+          <hr />
+          <div class="text-right">
+            {{ .Date.Format "2006年1月2日 3時4分" }}
+          </div>
+        </div>
+      </div>
+    </article>
+  {{ end }}
+{{ end }}

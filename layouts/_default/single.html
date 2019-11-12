@@ -1,0 +1,30 @@
+{{ define "main" }}
+<article class="container">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-1">
+          <a href="javascript:void(0);" onclick="history.go(-1);"> ← </a>
+        </div>
+        <div class="col">
+          {{ if eq .Section "news" }}<span class="badge badge-primary">{{ end }}
+          {{ if eq .Section "events" }}<span class="badge badge-success">{{ end }}
+          {{ if eq .Section "maintenance" }}<span class="badge badge-warning">{{ end }}
+          {{ .Section }}
+          </span><br />
+          {{ .Title }}
+        </div>
+        <div class="col text-right">
+          {{ .Date.Format "2006年1月2日 3時4分" }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+            <hr />
+            {{ .Content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+{{ end }}
