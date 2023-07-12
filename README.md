@@ -1,6 +1,8 @@
+[⇒README in English](README-en.md)
+
 # gs2-news-sample
 
-GS2-News でのお知らせ配信に使用するコンテンツのサンプル
+GS2-News でのお知らせ配信に使用するコンテンツのサンプルです。
 
 ## はじめに
 
@@ -80,7 +82,7 @@ x_gs2_scheduleEventId: grn:gs2:{region}:{ownerId}:schedule:schedule-0001:event:e
 GS2-News は GS2-Schedule でイベント期間のみお知らせを表示することができます。
 Front Matter で上記書式で GS2-Schedule のイベントGRNを指定することで、連動するイベントを指定できます。
 
-### おしらせの表示方法
+### お知らせの表示方法
 
 GS2-News はゲーム内でお知らせを表示する方法として2種類の方法を提供しています。
 どちらもブラウザを用いて表示することは変わりありませんが、ローカルのデータを参照する方法と、都度サーバから取得する方法の2種類です。
